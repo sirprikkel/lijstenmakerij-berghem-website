@@ -4,113 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Over Ons — Lijstenmakerij Berghem</title>
-  <meta name="description" content="Joachim en Carroline van Dijk — de mensen achter Lijstenmakerij Berghem 'Aan 't Huis'.">
+  <meta name="description" content="Joachim en Carroline van Dijk — de mensen achter Lijstenmakerij Berghem.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: { primary: '#7C2D12', secondary: '#C67B5C', accent: '#CA8A04', cream: '#FBF7F0', 'cream-dark': '#F5F0E1', 'text-dark': '#3D2B1F' },
-        fontFamily: { display: ['Amatic SC','cursive'], body: ['Cabin','sans-serif'] }
-      }}
-    }
-  </script>
-  <style>body{font-family:'Cabin',sans-serif;color:#3D2B1F;background:#FBF7F0}h1,h2,h3{font-family:'Amatic SC',cursive}</style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#1C1917',secondary:'#44403C',accent:'#CA8A04',gold:'#D4A843','gold-light':'#F5E6C8',cream:'#FAFAF9','off-white':'#F5F5F0'},fontFamily:{serif:['Playfair Display','serif'],sans:['Inter','sans-serif']}}}}</script>
+  <style>
+    body{font-family:'Inter',sans-serif;color:#1C1917;background:#FAFAF9;scroll-behavior:smooth}h1,h2,h3{font-family:'Playfair Display',serif}
+    .glass-dark{background:rgba(28,25,23,0.75);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,0.08)}
+    .gold-line{width:60px;height:2px;background:linear-gradient(90deg,#CA8A04,#F5E6C8)}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s cubic-bezier(0.23,1,0.32,1),transform 0.8s cubic-bezier(0.23,1,0.32,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  </style>
 </head>
 <body class="bg-cream">
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-secondary/20">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.png" alt="Logo" class="h-10"><span class="font-display text-2xl font-bold text-primary hidden sm:block">Lijstenmakerij Berghem</span></a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="index.html" class="text-text-dark hover:text-accent transition-colors">Home</a>
-        <a href="diensten.html" class="text-text-dark hover:text-accent transition-colors">Diensten</a>
-        <a href="galerij.html" class="text-text-dark hover:text-accent transition-colors">Galerij</a>
-        <a href="over-ons.html" class="text-primary hover:text-accent transition-colors">Over Ons</a>
-        <a href="contact.html" class="text-text-dark hover:text-accent transition-colors">Contact</a>
-        <a href="tel:0624702128" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-accent transition-colors cursor-pointer min-h-[44px] flex items-center">Bel Ons</a>
+  <nav class="fixed top-0 w-full z-50 glass-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.png" alt="Logo" class="h-10 brightness-200"><div class="hidden sm:block"><span class="font-serif text-lg text-white tracking-wide">Lijstenmakerij</span><span class="block text-[10px] uppercase tracking-[0.3em] text-gold-light/70">Berghem</span></div></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-light tracking-wide">
+        <a href="index.html" class="text-white/70 hover:text-gold transition-colors">Home</a><a href="diensten.html" class="text-white/70 hover:text-gold transition-colors">Diensten</a><a href="galerij.html" class="text-white/70 hover:text-gold transition-colors">Galerij</a><a href="over-ons.html" class="text-gold-light hover:text-gold transition-colors">Over Ons</a><a href="contact.html" class="text-white/70 hover:text-gold transition-colors">Contact</a>
+        <a href="tel:0624702128" class="border border-gold/40 text-gold px-5 py-2.5 hover:bg-gold hover:text-primary transition-all cursor-pointer min-h-[44px] flex items-center tracking-widest text-xs uppercase">Afspraak</a>
       </div>
-      <button id="menuBtn" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <button id="menuBtn" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-cream border-t border-secondary/20 px-4 py-4 space-y-3">
-      <a href="index.html" class="block py-2">Home</a><a href="diensten.html" class="block py-2">Diensten</a><a href="galerij.html" class="block py-2">Galerij</a><a href="over-ons.html" class="block text-primary font-medium py-2">Over Ons</a><a href="contact.html" class="block py-2">Contact</a>
-      <a href="tel:0624702128" class="block bg-primary text-white text-center px-4 py-3 rounded-full">Bel 06-24702128</a>
-    </div>
+    <div id="mobileMenu" class="hidden md:hidden glass-dark border-t border-white/5 px-6 py-6 space-y-4"><a href="index.html" class="block text-white/70 py-2 text-sm">Home</a><a href="diensten.html" class="block text-white/70 py-2 text-sm">Diensten</a><a href="galerij.html" class="block text-white/70 py-2 text-sm">Galerij</a><a href="over-ons.html" class="block text-gold-light py-2 text-sm">Over Ons</a><a href="contact.html" class="block text-white/70 py-2 text-sm">Contact</a></div>
   </nav>
 
-  <!-- Hero -->
-  <section class="pt-28 pb-16 bg-cream-dark">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-      <p class="text-secondary uppercase tracking-widest text-sm mb-2">Over ons</p>
-      <h1 class="font-display text-6xl md:text-7xl font-bold text-primary">Joachim & Carroline van Dijk</h1>
-    </div>
-  </section>
+  <section class="relative pt-20"><div class="bg-primary py-24"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div class="gold-line mb-6"></div><p class="text-gold/60 text-xs uppercase tracking-[0.4em] mb-4">Over ons</p><h1 class="font-serif text-5xl md:text-6xl text-white font-medium">Joachim & Carroline<br>van Dijk</h1></div></div></section>
 
-  <!-- Verhaal -->
-  <section class="py-16 bg-cream">
-    <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      <div class="grid md:grid-cols-5 gap-12">
-        <div class="md:col-span-3 space-y-6 text-text-dark/80 leading-relaxed">
+  <!-- Story -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid md:grid-cols-5 gap-16">
+        <div class="md:col-span-3 space-y-6 text-secondary/70 font-light leading-relaxed reveal">
           <p>Joachim van Dijk woont samen met zijn vrouw Carroline en twee dochters in Berghem (gemeente Oss). Al vele jaren hebben zij het geluk om van hun hobby hun werk te kunnen maken.</p>
           <p>Carroline werkt als zelfstandig kunstenaar — onder andere bekend van het winnen van 'Sterren op het Doek' — en Joachim verzorgt het werk daaromheen: het prepareren van ondergronden, het vernissen van voltooid werk en het professioneel inlijsten. In 2019 werd Carroline geselecteerd voor de tentoonstelling 'Lang Leve Rembrandt' in het Rijksmuseum.</p>
-          <p>Na meer dan 15 jaar de lijsten te hebben verzorgd voor opdrachtgevers en informeel voor anderen, werd de keuken te klein en de passie te groot. De aangrenzende garage werd omgebouwd tot showroom, zodat ze nu lijsten aan iedereen in Berghem en omstreken kunnen aanbieden.</p>
-          <blockquote class="border-l-4 border-accent pl-6 py-2 italic text-primary text-lg font-display text-3xl">"Elk werk dat waarde voor u heeft, is het waard om goed ingelijst te worden."</blockquote>
-          <p>Alle kwaliteitsprofielen worden met de hand en met specialistische precisiemachines exact op maat gemaakt. Alleen de beste zuurvrije materialen worden gebruikt — professioneel en duurzaam, zoals het hoort. Er is veel mogelijk: modern inlijstwerk uit de laatste collecties, maar ook traditioneel.</p>
+          <p>Na meer dan 15 jaar de lijsten te hebben verzorgd voor opdrachtgevers en informeel voor anderen, werd de keuken te klein en de passie te groot. De aangrenzende garage werd omgebouwd tot showroom.</p>
+          <blockquote class="border-l-2 border-gold pl-6 py-4 my-8">
+            <p class="font-serif text-2xl text-primary italic leading-relaxed">"Elk werk dat waarde voor u heeft, is het waard om goed ingelijst te worden."</p>
+          </blockquote>
+          <p>Alle kwaliteitsprofielen worden met de hand en met specialistische precisiemachines exact op maat gemaakt. Alleen de beste zuurvrije materialen — professioneel en duurzaam, zoals het hoort. Modern of traditioneel, fijne lijstjes tot heel breed en robuust.</p>
           <p>Doordat alles in eigen huis wordt gedaan, zijn de lijntjes kort, de service hoog en de prijzen scherp.</p>
         </div>
-        <div class="md:col-span-2 space-y-4">
-          <img src="images/showroom5.jpg" alt="Showroom" class="rounded-2xl shadow-md w-full object-cover" loading="lazy">
-          <img src="images/showroom2.jpg" alt="Werk in showroom" class="rounded-2xl shadow-md w-full object-cover" loading="lazy">
+        <div class="md:col-span-2 space-y-4 reveal">
+          <img src="images/showroom5.jpg" alt="Showroom" class="w-full object-cover rounded-sm shadow-md" loading="lazy">
+          <img src="images/showroom2.jpg" alt="Werk in showroom" class="w-full object-cover rounded-sm shadow-md" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Referenties -->
-  <section class="py-16 bg-cream-dark">
-    <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-5xl font-bold text-primary mb-8">Ook lijstenmaker voor</h2>
-      <div class="flex flex-wrap justify-center gap-6 text-text-dark/70 text-lg">
-        <span class="bg-cream px-6 py-3 rounded-full">Museum Jan Cunen</span>
-        <span class="bg-cream px-6 py-3 rounded-full">Jumbo</span>
-        <span class="bg-cream px-6 py-3 rounded-full">Loodswezen</span>
-        <span class="bg-cream px-6 py-3 rounded-full">e.a.</span>
+  <section class="py-20 bg-primary">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 text-center reveal">
+      <p class="text-gold/60 text-xs uppercase tracking-[0.4em] mb-4">Vertrouwd door</p>
+      <h2 class="font-serif text-4xl text-white font-medium mb-10">Ook lijstenmaker voor</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <span class="border border-white/10 text-white/50 px-8 py-4 text-sm font-light tracking-wide">Museum Jan Cunen</span>
+        <span class="border border-white/10 text-white/50 px-8 py-4 text-sm font-light tracking-wide">Jumbo</span>
+        <span class="border border-white/10 text-white/50 px-8 py-4 text-sm font-light tracking-wide">Loodswezen</span>
       </div>
     </div>
   </section>
 
   <!-- Carroline -->
-  <section class="py-16 bg-cream">
-    <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      <h2 class="font-display text-5xl font-bold text-primary mb-6">Werk van Carroline</h2>
-      <p class="text-text-dark/80 mb-6">Heeft u geen werk dat u wilt laten inlijsten? Carroline maakt graag een persoonlijk werk in opdracht — afgestemd op uw wensen.</p>
-      <div class="flex flex-wrap gap-4">
-        <a href="https://www.portrettekeningen.nl" target="_blank" rel="noopener" class="text-accent font-semibold hover:text-primary transition-colors cursor-pointer">Portretten & pentekeningen →</a>
-        <a href="https://www.carrolinevandijk.nl/kunstvoorjou" target="_blank" rel="noopener" class="text-accent font-semibold hover:text-primary transition-colors cursor-pointer">Gelimiteerde kunst →</a>
-        <a href="https://www.carrolinevandijk.nl" target="_blank" rel="noopener" class="text-accent font-semibold hover:text-primary transition-colors cursor-pointer">Vrij werk →</a>
+  <section class="py-24 bg-off-white">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 reveal">
+      <div class="gold-line mb-6"></div>
+      <h2 class="font-serif text-4xl text-primary mb-6">Werk van Carroline</h2>
+      <p class="text-secondary/70 font-light mb-8 max-w-xl">Heeft u geen werk dat u wilt laten inlijsten? Carroline maakt graag een persoonlijk werk in opdracht — afgestemd op uw wensen.</p>
+      <div class="flex flex-wrap gap-6">
+        <a href="https://www.portrettekeningen.nl" target="_blank" rel="noopener" class="text-gold text-xs uppercase tracking-[0.2em] font-medium hover:text-accent transition-colors cursor-pointer">Portretten & pentekeningen →</a>
+        <a href="https://www.carrolinevandijk.nl/kunstvoorjou" target="_blank" rel="noopener" class="text-gold text-xs uppercase tracking-[0.2em] font-medium hover:text-accent transition-colors cursor-pointer">Gelimiteerde kunst →</a>
+        <a href="https://www.carrolinevandijk.nl" target="_blank" rel="noopener" class="text-gold text-xs uppercase tracking-[0.2em] font-medium hover:text-accent transition-colors cursor-pointer">Vrij werk →</a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 bg-primary text-white text-center">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="font-display text-5xl font-bold mb-4">Kom eens langs</h2>
-      <p class="text-cream-dark/80 mb-8">U bent van harte welkom in onze knusse showroom. Overdag, 's avonds en in het weekend.</p>
-      <a href="tel:0624702128" class="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors cursor-pointer min-h-[44px] inline-flex items-center text-lg">📞 Bel 06-24702128</a>
-    </div>
-  </section>
+  <section class="py-24 bg-cream text-center"><div class="max-w-3xl mx-auto px-4"><div class="gold-line mx-auto mb-8"></div><h2 class="font-serif text-4xl text-primary mb-6">Kom eens langs</h2><p class="text-secondary/60 mb-10 font-light">U bent welkom in onze showroom. Overdag, 's avonds en in het weekend.</p><a href="tel:0624702128" class="bg-gold text-primary px-10 py-4 font-medium text-xs uppercase tracking-[0.2em] hover:bg-gold-light transition-all cursor-pointer min-h-[44px] inline-flex items-center">Bel 06-24702128</a></div></section>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-white py-12">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-      <div><h3 class="font-display text-3xl font-bold mb-4">Lijstenmakerij Berghem</h3><p class="text-cream-dark/70 text-sm">'Aan 't Huis' — persoonlijke aandacht.</p></div>
-      <div><h4 class="font-semibold mb-3 text-accent">Diensten</h4><ul class="space-y-2 text-sm text-cream-dark/70"><li><a href="diensten.html" class="hover:text-white cursor-pointer">Inlijsten op maat</a></li><li><a href="diensten.html" class="hover:text-white cursor-pointer">Doek opspannen</a></li><li><a href="diensten.html" class="hover:text-white cursor-pointer">Glas & passe-partout</a></li></ul></div>
-      <div><h4 class="font-semibold mb-3 text-accent">Contact</h4><ul class="space-y-2 text-sm text-cream-dark/70"><li>Zicht 8, Berghem</li><li><a href="tel:0624702128" class="hover:text-white cursor-pointer">06-24702128</a></li><li><a href="mailto:info@lijstenmakerberghem.nl" class="hover:text-white cursor-pointer">info@lijstenmakerberghem.nl</a></li></ul></div>
-      <div><h4 class="font-semibold mb-3 text-accent">Volg ons</h4><div class="flex gap-3"><a href="https://www.facebook.com/lijstenmakerijberghem/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors cursor-pointer" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.instagram.com/lijstenmakerberghem/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors cursor-pointer" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-white/10 text-center text-cream-dark/50 text-sm">&copy; 2026 Lijstenmakerij Berghem. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-accent cursor-pointer">Code Lieshout</a>.</div>
-  </footer>
-  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')});</script>
+  <footer class="bg-primary text-white py-16 border-t border-gold/10"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3 gap-10"><div><h3 class="font-serif text-xl mb-4">Lijstenmakerij Berghem</h3><p class="text-white/40 text-sm font-light">'Aan 't Huis'</p></div><div><h4 class="text-gold text-xs uppercase tracking-[0.2em] mb-4">Contact</h4><ul class="space-y-3 text-sm text-white/40 font-light"><li>Zicht 8, Berghem</li><li><a href="tel:0624702128" class="hover:text-gold cursor-pointer">06-24702128</a></li><li><a href="mailto:info@lijstenmakerberghem.nl" class="hover:text-gold cursor-pointer">info@lijstenmakerberghem.nl</a></li></ul></div><div><h4 class="text-gold text-xs uppercase tracking-[0.2em] mb-4">Volg ons</h4><div class="flex gap-3"><a href="https://www.facebook.com/lijstenmakerijberghem/" target="_blank" rel="noopener" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all cursor-pointer text-white/40" aria-label="Facebook"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.instagram.com/lijstenmakerberghem/" target="_blank" rel="noopener" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all cursor-pointer text-white/40" aria-label="Instagram"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div></div><div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 text-center text-white/20 text-xs">&copy; 2026 Lijstenmakerij Berghem. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-gold cursor-pointer">Code Lieshout</a>.</div></footer>
+  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')});const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');o.unobserve(el.target)}})},{threshold:0.15});document.querySelectorAll('.reveal').forEach(el=>o.observe(el));</script>
 </body>
 </html>
