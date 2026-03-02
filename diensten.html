@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diensten — Lijstenmakerij Berghem</title>
+  <meta name="description" content="Inlijsten op maat, doek opspannen, glas vervangen, passe-partouts en meer. Lijstenmakerij Berghem — vakkundig en persoonlijk.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { primary: '#7C2D12', secondary: '#C67B5C', accent: '#CA8A04', cream: '#FBF7F0', 'cream-dark': '#F5F0E1', 'text-dark': '#3D2B1F' },
+        fontFamily: { display: ['Amatic SC','cursive'], body: ['Cabin','sans-serif'] }
+      }}
+    }
+  </script>
+  <style>
+    body { font-family: 'Cabin', sans-serif; color: #3D2B1F; background: #FBF7F0; }
+    h1,h2,h3 { font-family: 'Amatic SC', cursive; }
+  </style>
+</head>
+<body class="bg-cream">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-secondary/20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.png" alt="Logo" class="h-10"><span class="font-display text-2xl font-bold text-primary hidden sm:block">Lijstenmakerij Berghem</span></a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-text-dark hover:text-accent transition-colors">Home</a>
+        <a href="diensten.html" class="text-primary hover:text-accent transition-colors">Diensten</a>
+        <a href="galerij.html" class="text-text-dark hover:text-accent transition-colors">Galerij</a>
+        <a href="over-ons.html" class="text-text-dark hover:text-accent transition-colors">Over Ons</a>
+        <a href="contact.html" class="text-text-dark hover:text-accent transition-colors">Contact</a>
+        <a href="tel:0624702128" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-accent transition-colors cursor-pointer min-h-[44px] flex items-center">Bel Ons</a>
+      </div>
+      <button id="menuBtn" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-cream border-t border-secondary/20 px-4 py-4 space-y-3">
+      <a href="index.html" class="block py-2">Home</a><a href="diensten.html" class="block text-primary font-medium py-2">Diensten</a><a href="galerij.html" class="block py-2">Galerij</a><a href="over-ons.html" class="block py-2">Over Ons</a><a href="contact.html" class="block py-2">Contact</a>
+      <a href="tel:0624702128" class="block bg-primary text-white text-center px-4 py-3 rounded-full">Bel 06-24702128</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 pb-16 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <p class="text-secondary uppercase tracking-widest text-sm mb-2">Onze diensten</p>
+      <h1 class="font-display text-6xl md:text-7xl font-bold text-primary">Wat wij voor u kunnen betekenen</h1>
+    </div>
+  </section>
+
+  <!-- Dienst 1 -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <img src="images/voorbeeld-papier.jpg" alt="Maatwerklijst met glas" class="rounded-2xl shadow-md w-full object-cover h-[350px]" loading="lazy">
+      <div>
+        <h2 class="font-display text-5xl font-bold text-primary mb-4">Inlijsten op Maat</h2>
+        <p class="text-text-dark/80 mb-4">Foto's, tekeningen, artprints, aquarellen, giclees, borduurwerken en trouw- of geboortekaarten — alles wat niet op doek of paneel geschilderd is, wordt achter glas (met of zonder passe-partout) ingelijst.</p>
+        <p class="text-text-dark/80 mb-4">Keuze uit meer dan 1500 profielen: van natuurlijk hout tot de complete aluminiumrange van Nielsen. Modern of traditioneel, fijne lijstjes tot heel breed en robuust.</p>
+        <p class="text-accent font-semibold">Prijzen zijn inclusief professioneel en conserverend inlijsten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dienst 2 -->
+  <section class="py-16 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <div class="md:order-2">
+        <img src="images/voorbeeld-doek.jpg" alt="Maatwerklijst doek" class="rounded-2xl shadow-md w-full object-cover h-[350px]" loading="lazy">
+      </div>
+      <div class="md:order-1">
+        <h2 class="font-display text-5xl font-bold text-primary mb-4">Maatwerklijsten voor Doek</h2>
+        <p class="text-text-dark/80 mb-4">Kwaliteits-maatwerklijsten met een diepe sponning, speciaal voor het inlijsten van doeken en panelen. Duurzaam en zuurvrij inlijsten inbegrepen.</p>
+        <p class="text-accent font-semibold">Inclusief professioneel inlijsten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dienst 3 -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <img src="images/sfeer1.jpg" alt="Doek opspannen" class="rounded-2xl shadow-md w-full object-cover h-[350px]" loading="lazy">
+      <div>
+        <h2 class="font-display text-5xl font-bold text-primary mb-4">Doek Opspannen</h2>
+        <p class="text-text-dark/80 mb-4">Heeft u een doek zonder frame ontvangen? Wij spannen het op een gevingerlast spieraam op maat, zodat het niet kromtrekt en ten alle tijde nagespannen kan worden via de spietjes aan de achterzijde.</p>
+        <p class="text-text-dark/80 mb-4">Uw doek is ophangklaar met ophangbevestiging, maar uiteraard ook te combineren met een van onze moderne (bak)lijsten.</p>
+        <p class="text-accent font-semibold">Inclusief spieraam en ophangbevestiging.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dienst 4 -->
+  <section class="py-16 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <div class="md:order-2">
+        <img src="images/showroom4.jpg" alt="Glas en passe-partout" class="rounded-2xl shadow-md w-full object-cover h-[350px]" loading="lazy">
+      </div>
+      <div class="md:order-1">
+        <h2 class="font-display text-5xl font-bold text-primary mb-4">Glas & Passe-partout</h2>
+        <p class="text-text-dark/80 mb-4">Schilderijglas, museum/artglas (ontspiegeld) en Tegla etsglas op voorraad. Niet-vergelende zuurvrije passe-partouts op maat — standaard off-white, maar ook verdiept, tweekleurig en meer is mogelijk.</p>
+        <p class="text-text-dark/80">Ook verkoop van losse passe-partouts op maat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overige diensten -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <h2 class="font-display text-5xl font-bold text-primary text-center mb-12">En nog veel meer</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-cream-dark rounded-2xl p-8">
+          <h3 class="font-display text-3xl font-bold text-primary mb-2">Herinlijsten</h3>
+          <p class="text-text-dark/80 text-sm">Bestaand werk opnieuw inlijsten in een nieuw of ander profiel.</p>
+        </div>
+        <div class="bg-cream-dark rounded-2xl p-8">
+          <h3 class="font-display text-3xl font-bold text-primary mb-2">Glas Vervangen</h3>
+          <p class="text-text-dark/80 text-sm">Kapot of verouderd glas vervangen door helder, ontspiegeld of museumglas.</p>
+        </div>
+        <div class="bg-cream-dark rounded-2xl p-8">
+          <h3 class="font-display text-3xl font-bold text-primary mb-2">Vacuümpers</h3>
+          <p class="text-text-dark/80 text-sm">Zuurvrij plakken of opspannen met onze vacuümpers, in combinatie met een nieuwe lijst.</p>
+        </div>
+        <div class="bg-cream-dark rounded-2xl p-8">
+          <h3 class="font-display text-3xl font-bold text-primary mb-2">Spiegels op Maat</h3>
+          <p class="text-text-dark/80 text-sm">Spiegels precies op de gewenste afmeting.</p>
+        </div>
+        <div class="bg-cream-dark rounded-2xl p-8">
+          <h3 class="font-display text-3xl font-bold text-primary mb-2">Kleine Reparaties</h3>
+          <p class="text-text-dark/80 text-sm">Reparaties aan lijst en doek — vrijblijvende offerte.</p>
+        </div>
+        <div class="bg-cream-dark rounded-2xl p-8">
+          <h3 class="font-display text-3xl font-bold text-primary mb-2">Gift Vouchers</h3>
+          <p class="text-text-dark/80 text-sm">Verras iemand met een gift voucher in waarde naar keuze, in mooie cadeauverpakking. Tot een jaar geldig.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="font-display text-5xl font-bold mb-4">Benieuwd wat we voor u kunnen doen?</h2>
+      <p class="text-cream-dark/80 mb-8">Kom vrijblijvend langs in onze showroom. Altijd welkom — overdag, 's avonds en in het weekend.</p>
+      <a href="tel:0624702128" class="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors cursor-pointer min-h-[44px] inline-flex items-center text-lg">📞 Bel 06-24702128</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div><h3 class="font-display text-3xl font-bold mb-4">Lijstenmakerij Berghem</h3><p class="text-cream-dark/70 text-sm">'Aan 't Huis' — persoonlijke aandacht.</p></div>
+      <div><h4 class="font-semibold mb-3 text-accent">Diensten</h4><ul class="space-y-2 text-sm text-cream-dark/70"><li>Inlijsten op maat</li><li>Doek opspannen</li><li>Glas & passe-partout</li><li>Herinlijsten & reparatie</li></ul></div>
+      <div><h4 class="font-semibold mb-3 text-accent">Contact</h4><ul class="space-y-2 text-sm text-cream-dark/70"><li>Zicht 8, Berghem</li><li><a href="tel:0624702128" class="hover:text-white cursor-pointer">06-24702128</a></li><li><a href="mailto:info@lijstenmakerberghem.nl" class="hover:text-white cursor-pointer">info@lijstenmakerberghem.nl</a></li></ul></div>
+      <div><h4 class="font-semibold mb-3 text-accent">Volg ons</h4><div class="flex gap-3"><a href="https://www.facebook.com/lijstenmakerijberghem/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors cursor-pointer" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.instagram.com/lijstenmakerberghem/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors cursor-pointer" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-white/10 text-center text-cream-dark/50 text-sm">&copy; 2026 Lijstenmakerij Berghem. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-accent cursor-pointer">Code Lieshout</a>.</div>
+  </footer>
+  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')});</script>
+</body>
+</html>
